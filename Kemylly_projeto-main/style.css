@@ -1,0 +1,210 @@
+/* === REMOVE the invalid variable definition === */
+/* ':root{
+  --font: src: url('aloja.woff.otf') format('woff');
+}' */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  scroll-behavior: smooth;
+  font-family: 'Livvic', sans-serif; /* fonte principal do corpo de texto */
+}
+
+/* === Fontes personalizadas CORRIGIDAS === */
+@font-face {
+  font-family: 'Aloja';
+  src: url('fontes/elleganthe/Elleganthe.ttf') format('truetype'); /* Corrigido 'ttf' para 'truetype' */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Schoobel';
+  src: url('fontes/Schoolbell-Regular.ttf') format('truetype'); /* Corrigido formato para 'truetype' */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Livvic';
+  src: url('fontes/Livvic-Regular.ttf') format('truetype'); /* Corrigido formato para 'truetype' */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'elegance';
+  src: url('fontes/elleganthe/Elleganthe.ttf') format('truetype'); /* Corrigido formato para 'truetype' */
+  font-weight: 400;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'mid';
+  src: url('fontes/midnight_gelactic/Midnight\ Gelactic\ DEMO\ VERSION.otf') format('truetype'); /* Corrigido formato para 'truetype' */
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* === Seção 1 - Hero === */
+.hero {
+  height: 100vh;
+  background: url('imagem\ de\ fundo.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* CORRIGIDO: Seletor para aplicar a 'Aloja' a ambos h1 E h2 */
+h1, h2 {
+  font-family: 'Aloja';
+}
+
+
+nav {
+  width: 100%;
+  padding: 20px;
+  background: rgba(0,0,0,0.2);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  /* A fonte 'Aloja' já é aplicada pela regra 'h1, h2' acima */
+}
+
+.hero-content h1 span {
+  font-size: 4rem;
+  display: block;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* === Seção 2 - Intro === */
+.intro {
+  min-height: 100vh;
+  background-image: linear-gradient(90deg, #8ed4f1, #b8e3c1, #f3e7aa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.titulo1{
+  /* CORRIGIDO: Use o nome da família da fonte, não o nome do arquivo */
+  font-family: 'elegance';
+}
+
+.intro-left h2 {
+  color: #fff;
+  /* CORRIGIDO: Use o nome da família da fonte, não o nome do arquivo */
+  font-family: 'Aloja';
+}
+
+.intro-left h2 span {
+  font-size: 3rem;
+  display: block;
+}
+
+
+.intro-right {
+  max-width: 700px;
+  margin-top: 30px;
+}
+
+.intro-right p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.intro-bottom {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 40px;
+  max-width: 800px;
+}
+
+/* === Seção 3 - Cards === */
+.cards {
+  min-height: 100vh;
+  background: linear-gradient(90deg, #8ed4f1, #b8e3c1, #f3e7aa);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 60px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  background: #87a9c9;
+  padding: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+
+.card img {
+  width: 300px;
+  height: 350px;
+  display: block;
+}
+
+/* === Footer === */
+footer {
+  font-family: 'elegance';
+  background: #87a9c9;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+footer span {
+  font-weight: bold;
+}
